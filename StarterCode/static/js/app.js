@@ -117,7 +117,6 @@ function plotChart(testId){
 
 function updateChange(){
     var menuDropdown = d3.selectAll("#selDataset")
-    var demoInfo = d3.selectAll("#sample-metadata")
 
     d3.json("samples.json").then(item => {
         console.log(item.names)
@@ -135,11 +134,8 @@ function updateChange(){
 
 
 function optionChanged(newSubject) {
-
         plotChart(newSubject);
-
 }
-
 // Initialize the Dashboard
 updateChange();
 
